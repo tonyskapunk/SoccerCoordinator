@@ -2,138 +2,166 @@
 
 import UIKit
 
+
 // Dictionary for each player
-let player1: [String: Any] = [
+let player1: [String: String] = [
     "Name": "Joe Smith",
-    "Height (Inches)": 42,
-    "Soccer Experience": true,
+    "Height": "42",
+    "Experience": "YES",
     "Guardian Name(s)": "Jim and Jan Smith"
 ]
 
-let player2: [String: Any] = [
+let player2: [String: String] = [
     "Name": "Jill Tanner",
-    "Height (Inches)": 36,
-    "Soccer Experience": true,
+    "Height": "36",
+    "Experience": "YES",
     "Guardian Name(s)": "Clara Tanner"
 ]
 
-let player3: [String: Any] = [
+let player3: [String: String] = [
     "Name": "Bill Bon",
-    "Height (Inches)": 43,
-    "Soccer Experience": true,
+    "Height": "43",
+    "Experience": "YES",
     "Guardian Name(s)": "Sara and Jenny Bon"
 ]
 
-let player4: [String: Any] = [
+let player4: [String: String] = [
     "Name": "Eva Gordon",
-    "Height (Inches)": 45,
-    "Soccer Experience": false,
+    "Height": "45",
+    "Experience": "NO",
     "Guardian Name(s)": "Wendy amd Mike Gordon"
 ]
 
-let player5: [String: Any] = [
+let player5: [String: String] = [
     "Name": "Matt Gill",
-    "Height (Inches)": 40,
-    "Soccer Experience": false,
+    "Height": "40",
+    "Experience": "NO",
     "Guardian Name(s)": "Charles and Sylvia Gill"
 ]
 
-let player6: [String: Any] = [
+let player6: [String: String] = [
     "Name": "Kimmy Stein",
-    "Height (Inches)": 41,
-    "Soccer Experience": false,
+    "Height": "41",
+    "Experience": "NO",
     "Guardian Name(s)": "Bill and Hillary Stein"
 ]
 
-let player7: [String: Any] = [
+let player7: [String: String] = [
     "Name": "Sammy Adams",
-    "Height (Inches)": 45,
-    "Soccer Experience": false,
+    "Height": "45",
+    "Experience": "NO",
     "Guardian Name(s)": "Jeff Adams"
 ]
 
-let player8: [String: Any] = [
+let player8: [String: String] = [
     "Name": "Karl Saygan",
-    "Height (Inches)": 42,
-    "Soccer Experience": true,
+    "Height": "42",
+    "Experience": "YES",
     "Guardian Name(s)": "Heather Bledsoe"
 ]
 
-let player9: [String: Any] = [
+let player9: [String: String] = [
     "Name": "Suzane Greenberg",
-    "Height (Inches)": 44,
-    "Soccer Experience": true,
+    "Height": "44",
+    "Experience": "YES",
     "Guardian Name(s)": "Henrietta Dumas"
 ]
 
-let player10: [String: Any] = [
+let player10: [String: String] = [
     "Name": "Sal Dali",
-    "Height (Inches)": 41,
-    "Soccer Experience": false,
+    "Height": "41",
+    "Experience": "NO",
     "Guardian Name(s)": "Gala Dali"
 ]
 
-let player11: [String: Any] = [
+let player11: [String: String] = [
     "Name": "Joe Kavalier",
-    "Height (Inches)": 39,
-    "Soccer Experience": false,
+    "Height": "39",
+    "Experience": "NO",
     "Guardian Name(s)": "Sam and Elaine Kavalier"
 ]
 
-let player12: [String: Any] = [
+let player12: [String: String] = [
     "Name": "Ben Finkelstein",
-    "Height (Inches)": 44,
-    "Soccer Experience": false,
+    "Height": "44",
+    "Experience": "NO",
     "Guardian Name(s)": "Aaron and Jill Finkelstein"
 ]
 
-let player13: [String: Any] = [
+let player13: [String: String] = [
     "Name": "Diego Soto",
-    "Height (Inches)": 41,
-    "Soccer Experience": true,
+    "Height": "41",
+    "Experience": "YES",
     "Guardian Name(s)": "Robin and Sarika Soto"
 ]
 
-let player14: [String: Any] = [
+let player14: [String: String] = [
     "Name": "Chole Alaska",
-    "Height (Inches)": 47,
-    "Soccer Experience": false,
+    "Height": "47",
+    "Experience": "NO",
     "Guardian Name(s)": "David and Jamie Alaska"
 ]
 
-let player15: [String: Any] = [
+let player15: [String: String] = [
     "Name": "Arnold Wills",
-    "Height (Inches)": 43,
-    "Soccer Experience": false,
+    "Height": "43",
+    "Experience": "NO",
     "Guardian Name(s)": "Claire Wills"
 ]
 
-let player16: [String: Any] = [
+let player16: [String: String] = [
     "Name": "Phillp Helm",
-    "Height (Inches)": 44,
-    "Soccer Experience": true,
+    "Height": "44",
+    "Experience": "YES",
     "Guardian Name(s)": "Thomas Helm and Eva Jones"
 ]
 
-let player17: [String: Any] = [
+let player17: [String: String] = [
     "Name": "Les Clay",
-    "Height (Inches)": 42,
-    "Soccer Experience": true,
+    "Height": "42",
+    "Experience": "YES",
     "Guardian Name(s)": "Wynonna Brown"
 ]
 
-let player18: [String: Any] = [
+let player18: [String: String] = [
     "Name": "Herschel Krustofskit",
-    "Height (Inches)": 45,
-    "Soccer Experience": true,
+    "Height": "45",
+    "Experience": "YES",
     "Guardian Name(s)": "Hyman and Rachel Krustofski"
 ]
 
 
 // Array of Dictionaries for Entire League
-var entireLeague:[[String: Any]] = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
+var entireLeague: [[String: String]] = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
+
+
+// Array of Dictionaries for the 3 teams
+var teams: [[String: String]] = [
+    ["Name": "Dragons", "Date": "March 17, 1pm"],
+    ["Name": "Sharks", "Date": "March 17, 3pm"],
+    ["Name": "Raptors", "Date": "March 18, 1pm"]
+]
+
+
+// Array of Beginners and Pro's
+var beginnerPlayers: [[String: String]] = []
+var proPlayers: [[String: String]] = []
+
+
+// Sorting Beginners and Pro players
+for player in entireLeague {
+    if player["Experience"] == "YES" {
+        proPlayers.append(player)
+    }
+    else {
+        beginnerPlayers.append(player)
+    }
+}
 
 
 // Array of Dictionaries for each of three teams
-var team1: [[String: Any]] = []
+
+
+
+
 
