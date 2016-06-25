@@ -1,6 +1,5 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
+/* Project 1
+    Soccer Coordinator */
 
 
 // Dictionary for each player
