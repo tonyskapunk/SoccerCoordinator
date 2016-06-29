@@ -60,26 +60,12 @@ beginnerPlayers
 
 //Experiments----------------------------------------------------------------------
 var orderedAllPlayers: [[String: String]] =  (proPlayers) + (beginnerPlayers)
-
 while orderedAllPlayers.count > 0 {
     var one = orderedAllPlayers.removeFirst()
    // var two = orderedAllPlayers.removeLast()
    // var three = orderedAllPlayers.removeLast()
     
 }
-
-
-var words = ["Food", "TV", "Guitar", "Watch"]
-/*while words.count > 0 {
-    var a = words.removeLast()
-    var b = words.removeLast()
-}
-*/
-
-for sd in words {
-    var a = words.removeLast()
-}
-
 
 
 //----------------------------------------------------------------------
