@@ -34,12 +34,12 @@ var teams: [[String: String]] = [
     ["Name": "Raptors", "Date": "March 18, 1pm"]
 ]
 
-// Array of Beginners and Pro's
+// Array of Dictionaties of Beginners and Pro's
 var beginnerPlayers: [[String: String]] = []
 var proPlayers: [[String: String]] = []
 
 
-// Sorting Beginners and Pro players
+// Sorting Beginners and Pro players seperately
 for player in disorganizedEntireLeague {
     if player["Experience"] == "YES" {
         proPlayers.append(player)
@@ -48,24 +48,34 @@ for player in disorganizedEntireLeague {
         beginnerPlayers.append(player)
     }
 }
-// also organiz height of players
-
-//--------------------------------------------------
-
+// Organizing Height on proPlayers and beginnerPlayers from smallest to biggest
 proPlayers = proPlayers.sort { $0["Height"] < $1["Height"] }
-proPlayers
 beginnerPlayers = beginnerPlayers.sort { $0["Height"] < $1["Height"] }
-beginnerPlayers
 
-
-//Experiments----------------------------------------------------------------------
+// Adding proPlayers and beginnerPlayer together which whould be all players in order
 var orderedAllPlayers: [[String: String]] =  (proPlayers) + (beginnerPlayers)
+
+
+// Array of Dictionaries for each team
+var dragons: [[String: String]] = []
+var sharks: [[String: String]] = []
+var raptors: [[String: String]] = []
+
+
+// Computer taking turns giving 2 player from heights to lowest to one team at a time
 while orderedAllPlayers.count > 0 {
-    var one = orderedAllPlayers.removeFirst()
-   // var two = orderedAllPlayers.removeLast()
-   // var three = orderedAllPlayers.removeLast()
-    
+    dragons.append(orderedAllPlayers.removeLast())
+    dragons.append(orderedAllPlayers.removeFirst())
+    sharks.append(orderedAllPlayers.removeLast())
+    sharks.append(orderedAllPlayers.removeFirst())
+    raptors.append(orderedAllPlayers.removeLast())
+    raptors.append(orderedAllPlayers.removeFirst())
 }
+
+// Connecting the teams info and all players
+var dragonsLetter = ("\(teams[0]) \(dragons)")
+var sharksLetter = ("\(teams[1]) \(sharks)")
+var raptorsLetter = ("\(teams[2]) \(raptors)")
 
 
 //----------------------------------------------------------------------
