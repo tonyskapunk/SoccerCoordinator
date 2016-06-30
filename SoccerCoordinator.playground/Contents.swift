@@ -29,10 +29,11 @@ var disorganizedEntireLeague: [[String: String]] = [player1, player2, player3, p
 
 //Array of Dictionaries for the 3 teams
 var teams: [[String: String]] = [
-    ["Name": "Dragons", "Date": "March 17, 1pm"],
-    ["Name": "Sharks", "Date": "March 17, 3pm"],
-    ["Name": "Raptors", "Date": "March 18, 1pm"]
+    ["Team": "Dragons", "Date": "March 17, 1pm"],
+    ["Team": "Sharks", "Date": "March 17, 3pm"],
+    ["Team": "Raptors", "Date": "March 18, 1pm"]
 ]
+
 
 // Array of Dictionaties of Beginners and Pro's
 var beginnerPlayers: [[String: String]] = []
@@ -48,15 +49,18 @@ for player in disorganizedEntireLeague {
         beginnerPlayers.append(player)
     }
 }
+
+
 // Organizing Height on proPlayers and beginnerPlayers from smallest to biggest
 proPlayers = proPlayers.sort { $0["Height"] < $1["Height"] }
 beginnerPlayers = beginnerPlayers.sort { $0["Height"] < $1["Height"] }
+
 
 // Adding proPlayers and beginnerPlayer together which whould be all players in order
 var orderedAllPlayers: [[String: String]] =  (proPlayers) + (beginnerPlayers)
 
 
-// Array of Dictionaries for each team
+// Array of Dictionaries for each team seperately
 var dragons: [[String: String]] = []
 var sharks: [[String: String]] = []
 var raptors: [[String: String]] = []
@@ -70,45 +74,33 @@ while orderedAllPlayers.count > 0 {
     sharks.append(orderedAllPlayers.removeFirst())
     raptors.append(orderedAllPlayers.removeLast())
     raptors.append(orderedAllPlayers.removeFirst())
-}
-
-// Connecting the teams info and all players
-var dragonsLetter = ("\(teams[0]) \(dragons)")
-var sharksLetter = ("\(teams[1]) \(sharks)")
-var raptorsLetter = ("\(teams[2]) \(raptors)")
-
-
-//----------------------------------------------------------------------
-/*
-var proPlayersPerTeam = proPlayers.count / teams.count
-var beginnerPlayersPerTeam = beginnerPlayers.count / teams.count
-
-var dragons: [[String:String]] = []
-
-func addProPlayers(var team:[[String:String]]) {
-    for i in 0...2 {
-        var start = i * proPlayersPerTeam
-        var end = i + proPlayersPerTeam
-        if (end >= proPlayers.count) {
-            end = proPlayers.count - 1
-        }
     
-        team.appendContentsOf(proPlayers[start...end])
-    }
 }
 
 
-//var dragons: [[String:String]] = []
-//dragons.appendContentsOf(beginnerPlayers[0...3])
-//dragons.appendContentsOf(proPlayers[0...1])
+// Ading teams name and calendar to their own Array of Dictionary
+dragons.insert(teams[0], atIndex: 0)
+sharks.insert(teams[1], atIndex: 1)
+raptors.insert(teams[2], atIndex: 2)
 
 
-var sharks: [[String:String]] = []
-sharks.appendContentsOf(beginnerPlayers[4...7])
-sharks.appendContentsOf(proPlayers[2...3])
+// Writting a letter to thier parants about which team their kids would play and their date
+for a in dragons {
+    print("Hi \(a["Guardian(s)"]). Your child \(a["Name"])s team and calendare are shown here \(teams[0])." )
+}
+for b in sharks {
+    print("Hi \(b["Guardian(s)"]). Your child \(b["Name"])s team and calendare are shown here \(teams[1])." )
+}
+for c in raptors {
+    print("Hi \(c["Guardian(s)"]). Your child \(c["Name"])s team and calendare are shown here \(teams[2])." )
+}
 
 
-var raptors: [[String:String]] = []
-raptors.appendContentsOf(beginnerPlayers[8...10])
-raptors.appendContentsOf(proPlayers[4...6])
+
+
+/* Ideas
+var allPlayersAndTeams = [dragons, sharks, raptors]
+for letter: [[String: String]] in allPlayersAndTeams {
+   // print("Hi \(letter["Guardian(s)"]). \(letter["Name"])s team is the \(teams[0])")
+ }
 */
