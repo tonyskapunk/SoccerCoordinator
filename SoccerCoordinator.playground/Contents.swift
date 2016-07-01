@@ -2,7 +2,7 @@
  Soccer Coordinator */
 
 
-// Dictionary for each player
+// Dictionaries for each player
 let player1: [String: String] = ["Name": "Joe Smith", "Height": "42", "Experience": "YES", "Guardian(s)": "Jim and Jan Smith"]
 let player2: [String: String] = ["Name": "Jill Tanner", "Height": "36", "Experience": "YES", "Guardian(s)": "Clara Tanner"]
 let player3: [String: String] = ["Name": "Bill Bon", "Height": "43", "Experience": "YES", "Guardian(s)": "Sara and Jenny Bon"]
@@ -35,12 +35,12 @@ var teams: [[String: String]] = [
 ]
 
 
-// Array of Dictionaties of Beginners and Pro's
+// Array of Dictionaries of Beginners and Pros
 var beginnerPlayers: [[String: String]] = []
 var proPlayers: [[String: String]] = []
 
 
-// Sorting Beginners and Pro players seperately
+// Sorting Beginners and Pro players separately
 for player in disorganizedEntireLeague {
     if player["Experience"] == "YES" {
         proPlayers.append(player)
@@ -66,7 +66,7 @@ var sharks: [[String: String]] = []
 var raptors: [[String: String]] = []
 
 
-// Computer taking turns giving 2 player from heights to lowest to one team at a time
+// Computer taking turns giving 2 player, from heights to lowest, to one team at a time
 while orderedAllPlayers.count > 0 {
     dragons.append(orderedAllPlayers.removeLast())
     dragons.append(orderedAllPlayers.removeFirst())
@@ -78,13 +78,13 @@ while orderedAllPlayers.count > 0 {
 }
 
 
-// Ading teams name and calendar to their own Array of Dictionary
+// Adding teams name and calendar to their own Array of Dictionary
 dragons.insert(teams[0], atIndex: 0)
 sharks.insert(teams[1], atIndex: 1)
 raptors.insert(teams[2], atIndex: 2)
 
 
-// Writting a letter to thier parants about which team their kids would play and their date
+// Writting a letter to thier parents about the team
 for a in dragons {
     print("Hi \(a["Guardian(s)"]). Your child \(a["Name"])s team and calendare are shown here \(teams[0])." )
 }
@@ -95,12 +95,3 @@ for c in raptors {
     print("Hi \(c["Guardian(s)"]). Your child \(c["Name"])s team and calendare are shown here \(teams[2])." )
 }
 
-
-
-
-/* Ideas
-var allPlayersAndTeams = [dragons, sharks, raptors]
-for letter: [[String: String]] in allPlayersAndTeams {
-   // print("Hi \(letter["Guardian(s)"]). \(letter["Name"])s team is the \(teams[0])")
- }
-*/
