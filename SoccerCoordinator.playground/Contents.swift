@@ -84,7 +84,7 @@ sharks.insert(teams[1], atIndex: 1)
 raptors.insert(teams[2], atIndex: 2)
 
 
-// Writting a letter to thier parents about the team
+// Writting a letter to their parents about their child's team
 for a in dragons {
     print("Hi \(a["Guardian(s)"]). Your child \(a["Name"])'s team and calender are shown here \(teams[0])." )
 }
