@@ -66,7 +66,7 @@ var sharks: [[String: String]] = []
 var raptors: [[String: String]] = []
 
 
-// Computer taking turns giving 2 player, from heights to lowest, to one team at a time
+// Computer taking turns assigning 2 players, from heights to lowest, to one team at a time
 while orderedAllPlayers.count > 0 {
     dragons.append(orderedAllPlayers.removeLast())
     dragons.append(orderedAllPlayers.removeFirst())
@@ -86,12 +86,12 @@ raptors.insert(teams[2], atIndex: 2)
 
 // Writting a letter to thier parents about the team
 for a in dragons {
-    print("Hi \(a["Guardian(s)"]). Your child \(a["Name"])s team and calendare are shown here \(teams[0])." )
+    print("Hi \(a["Guardian(s)"]). Your child \(a["Name"])'s team and calender are shown here \(teams[0])." )
 }
 for b in sharks {
-    print("Hi \(b["Guardian(s)"]). Your child \(b["Name"])s team and calendare are shown here \(teams[1])." )
+    print("Hi \(b["Guardian(s)"]). Your child \(b["Name"])'s team and calendar are shown here \(teams[1])." )
 }
 for c in raptors {
-    print("Hi \(c["Guardian(s)"]). Your child \(c["Name"])s team and calendare are shown here \(teams[2])." )
+    print("Hi \(c["Guardian(s)"]). Your child \(c["Name"])'s team and calendar are shown here \(teams[2])." )
 }
 
