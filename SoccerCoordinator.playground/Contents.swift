@@ -78,20 +78,16 @@ while orderedAllPlayers.count > 0 {
 }
 
 
-// Adding teams name and calendar to their own Array of Dictionary
-dragons.insert(teams[0], atIndex: 0)
-sharks.insert(teams[1], atIndex: 1)
-raptors.insert(teams[2], atIndex: 2)
-
-
 // Writting a letter to their parents about their child's team
-for a in dragons {
-    print("Hi \(a["Guardian(s)"]). Your child \(a["Name"])'s team and calender are shown here \(teams[0])." )
+for dragon in dragons {
+    print("Hi \(dragon["Guardian(s)"]!). Your child \(dragon["Name"]!)'s team and calender are shown here - \(teams[0]).")
 }
-for b in sharks {
-    print("Hi \(b["Guardian(s)"]). Your child \(b["Name"])'s team and calendar are shown here \(teams[1])." )
+
+for shark in sharks {
+    print("Hi \(shark["Guardian(s)"]!). Your child \(shark["Name"]!)'s team and calender are shown here - \(teams[1]).")
 }
-for c in raptors {
-    print("Hi \(c["Guardian(s)"]). Your child \(c["Name"])'s team and calendar are shown here \(teams[2])." )
+
+for raptor in raptors {
+    print("Hi \(raptor["Guardian(s)"]!). Your child \(raptor["Name"]!)'s team and calender are shown here - \(teams[2]).")
 }
 
